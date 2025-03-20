@@ -1,75 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@drawable/background_gradient"
+    android:gravity="center"
+    android:padding="32dp">
 
-
-
-    <EditText
-        android:autoLink="web"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:text="http://"
-        android:id="@+id/et1"
-        />
-
-    <Button
+    <!-- App Title or App Name -->
+    <TextView
+        android:id="@+id/app_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="save link"
-        android:id="@+id/btSave"
-        />
+        android:text="Welcome to DisplayFlex"
+        android:textSize="45sp"
+        android:gravity="center"
+        android:textColor="#5E6472"
+        android:textStyle="bold"
+        android:fontFamily="@font/robotoslab"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="60dp"/>
 
-
-    <EditText
+    <FrameLayout
+        android:id="@+id/frameLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="email"
-        android:id="@+id/registerEmail"
-        />
+        android:layout_height="300sp"
+        android:layout_below="@+id/app_title"
+        android:background="#e4e4e4" />
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="password"
-        android:inputType="textPassword"
-        android:id="@+id/registerPass"
-        />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Register"
-        android:layout_marginTop="25sp"
-        android:id="@+id/btRegister"
-        />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="email"
-        android:id="@+id/loginEmail"
-        />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="password"
-        android:inputType="textPassword"
-        android:id="@+id/loginPass"
-        />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Login"
-        android:layout_marginTop="10sp"
-        android:id="@+id/btLogin"
-        />
-
-</LinearLayout>
+</RelativeLayout>
