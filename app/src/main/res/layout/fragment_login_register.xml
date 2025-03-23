@@ -4,8 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background=""
-    tools:context=".Login_register">
+    android:background="@android:color/transparent"
+    tools:context=".view.Login_register">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,7 +28,6 @@
         android:padding="16dp"
         />
 
-    <!-- Register Button with rounded corners and custom color -->
     <Button
         android:id="@+id/registerbutton"
         android:layout_width="match_parent"

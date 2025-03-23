@@ -6,7 +6,6 @@
     android:gravity="center"
     android:padding="32dp">
 
-    <!-- App Title or App Name -->
     <TextView
         android:id="@+id/app_title"
         android:layout_width="wrap_content"
@@ -24,9 +23,9 @@
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
-        android:layout_height="300sp"
+        android:layout_height="350sp"
         android:layout_below="@+id/app_title"
-        android:background="#e4e4e4" />
+        android:background="@android:color/transparent" />
 
 
 </RelativeLayout>
