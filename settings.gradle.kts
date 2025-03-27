@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "JWTApp"
+rootProject.name = "DisplayFlex"
 include(":app")
  

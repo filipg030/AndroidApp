@@ -15,8 +15,15 @@
         android:gravity="center"
         android:background="@android:color/transparent">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20sp"
+            android:text=""
+            android:textColor="@android:color/holo_red_dark"
+            android:id="@+id/infobox"/>
+
         <EditText
-            android:id="@+id/emailEditText"
+            android:id="@+id/emailedittext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Email"
@@ -28,7 +35,7 @@
             android:layout_marginBottom="12dp"/>
 
         <EditText
-            android:id="@+id/passwordEditText"
+            android:id="@+id/passwordedittext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Password"
@@ -41,7 +48,7 @@
             android:layout_marginBottom="20dp"/>
 
         <Button
-            android:id="@+id/registerButton"
+            android:id="@+id/registerbutton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Register"

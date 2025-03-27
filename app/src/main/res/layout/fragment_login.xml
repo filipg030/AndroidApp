@@ -15,6 +15,14 @@
         android:gravity="center"
         android:background="@android:color/transparent">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20sp"
+            android:text=""
+            android:gravity="center"
+            android:textColor="@android:color/holo_red_dark"
+            android:id="@+id/infobox"/>
+
         <EditText
             android:id="@+id/emailEditText"
             android:layout_width="match_parent"

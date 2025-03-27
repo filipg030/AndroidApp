@@ -15,6 +15,7 @@ android {
         buildFeatures {
 
             viewBinding = true
+            dataBinding = true
 
         }
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -37,7 +38,7 @@ android {
 
 dependencies {
 
-    
+
     implementation(libs.retrofit)
     implementation(libs.gson)
     implementation(libs.gson.converter)

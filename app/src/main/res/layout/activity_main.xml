@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="LoggedUserViewModel"
+            type="com.example.jwtapp.viewmodel.LoggedUserViewModel" />
+    </data>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_gradient"
     android:gravity="center"
     android:padding="32dp">
+
+
 
     <TextView
         android:id="@+id/app_title"
@@ -23,9 +32,10 @@
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
-        android:layout_height="350sp"
+        android:layout_height="400sp"
         android:layout_below="@+id/app_title"
         android:background="@android:color/transparent" />
 
 
 </RelativeLayout>
+</layout>

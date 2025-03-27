@@ -1,6 +1,6 @@
 package com.example.jwtapp.model;
 
-public class RegisterResponse {
+public class LogoutResponse {
     private String message;
     private String token;
 
