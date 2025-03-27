@@ -70,6 +70,14 @@ public class SecondActivity extends AppCompatActivity {
         Toolbar toolbar = activitySecondBinding.topToolbar;
         setSupportActionBar(toolbar);
 
+        activitySecondBinding.fab.setOnClickListener(v -> {
+            Intent intent = new Intent(SecondActivity.this, PhotoActivity.class);
+            intent.putExtra("user", user);
+            intent.putExtra("token", token);
+            startActivity(intent);
+
+        });
+
     }
 
     @Override

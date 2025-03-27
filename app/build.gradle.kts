@@ -38,7 +38,13 @@ android {
 
 dependencies {
 
-
+    implementation (libs.camera.core)
+    implementation (libs.camera.camera2)
+    implementation (libs.camera.lifecycle)
+    implementation (libs.camera.video)
+    implementation (libs.camera.view)
+    implementation (libs.camera.mlkit.vision)
+    implementation (libs.camera.extensions)
     implementation(libs.retrofit)
     implementation(libs.gson)
     implementation(libs.gson.converter)

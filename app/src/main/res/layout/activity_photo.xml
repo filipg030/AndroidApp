@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@drawable/background_gradient"
+    tools:context=".view.PhotoActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="50sp"
+        android:text="Flex for the photo!"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+
+        android:layout_marginBottom="50sp"/>
+
+    <androidx.camera.view.PreviewView
+        android:background="#000000"
+        android:layout_width="300sp"
+        android:id="@+id/preview"
+        android:layout_height="300sp"
+        android:layout_gravity="center|center_vertical"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="50sp"
+            android:layout_marginTop="50sp"
+            android:background="@drawable/button_background"
+            android:text="Cancel"
+            android:id="@+id/cancelbutton"
+            android:gravity="center"
+            android:layout_marginRight="50sp"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="50sp"
+            android:layout_marginTop="50sp"
+            android:background="@drawable/button_background"
+            android:text="Post"
+            android:id="@+id/postbutton"
+            />
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

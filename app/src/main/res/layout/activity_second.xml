@@ -17,27 +17,46 @@
         android:orientation="vertical"
         tools:context=".view.SecondActivity">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/top_toolbar"
+
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#5E6472"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            app:title='@{"Hello, " + LoggedUserViewModel.loggedUserLiveData}'
-            app:titleTextColor="@android:color/white"
-            app:menu="@menu/top_nav_menu"
-            />
+            android:layout_height="match_parent">
 
 
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/top_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#5E6472"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:title='@{"Hello, " + LoggedUserViewModel.loggedUserLiveData}'                app:titleTextColor="@android:color/white"
+                app:menu="@menu/top_nav_menu"
+                android:elevation="2dp"
+                />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#FAF3DD"
-            android:padding="10dp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FAF3DD"
+                android:elevation="1dp"
+                android:layout_marginTop="60dp"
+                android:padding="10dp"/>
 
 
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_plus"
+                android:contentDescription="Add"
+                app:backgroundTint="#AED9E0"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="20sp"
+                android:layout_marginTop="16dp"
+                android:elevation="100dp"/>
 
-</LinearLayout>
+        </FrameLayout>
+
+    </LinearLayout>
 </layout>
