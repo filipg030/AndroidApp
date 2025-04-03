@@ -16,15 +16,34 @@
         android:text="Flex for the photo!"
         android:textColor="@android:color/black"
         android:textSize="30sp"
+        android:layout_marginBottom="30sp"/>
 
-        android:layout_marginBottom="50sp"/>
+    <Button
+        android:layout_width="150sp"
+        android:layout_height="50sp"
+        android:text="Flip camera"
+        android:layout_marginBottom="10sp"
+        android:background="@drawable/button_background"
+        android:id="@+id/flipCamera"
+        />
+
 
     <androidx.camera.view.PreviewView
         android:background="#000000"
         android:layout_width="300sp"
         android:id="@+id/preview"
         android:layout_height="300sp"
-        android:layout_gravity="center|center_vertical"/>
+        android:layout_gravity="center|center_vertical"
+        />
+
+
+    <EditText
+        android:layout_width="300sp"
+        android:layout_height="50sp"
+        android:background="@drawable/button_background"
+        android:layout_marginTop="20sp"
+        android:hint="Add a caption!"
+        android:id="@+id/caption"/>
 
     <LinearLayout
         android:layout_width="wrap_content"

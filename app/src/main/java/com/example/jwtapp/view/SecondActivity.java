@@ -24,10 +24,13 @@ import com.example.jwtapp.model.LoginSuccessResponse;
 import com.example.jwtapp.model.LogoutResponse;
 import com.example.jwtapp.model.Post;
 import com.example.jwtapp.model.PostAdapter;
+import com.example.jwtapp.model.PostResponse;
 import com.example.jwtapp.viewmodel.LoggedUserViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -58,14 +61,44 @@ public class SecondActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        // Dummy Data
-        postList = new ArrayList<>();
-        postList.add(new Post("First Post", "This is the first post content."));
-        postList.add(new Post("Second Post", "Here is some more text for the second post."));
-        postList.add(new Post("Another Post", "More details about another post."));
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("http://192.168.55.111:8080")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
 
-        postAdapter = new PostAdapter(postList);
-        recyclerView.setAdapter(postAdapter);
+        ProjectAPI projectAPI = retrofit.create(ProjectAPI.class);
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        Call<List<PostResponse>> call = projectAPI.getImages("Bearer " + this.token);
+        call.enqueue(new Callback<List<PostResponse>>() {
+
+            @Override
+            public void onResponse(Call<List<PostResponse>> call, Response<List<PostResponse>> response) {
+                if(!response.isSuccessful()){
+
+                } else {
+                    List<PostResponse> postList = response.body();
+                    List<Post> postsList2 = new ArrayList<>();
+                    for (PostResponse post : postList) {
+                        postsList2.add(new Post(post.getDescription(), post.getImageBase64(), post.getEmail()));
+                        Log.d("xxx", post.getDescription() + post.getEmail() + post.getImageBase64());
+                    }
+                    Log.d("xxx", "done");
+                    postAdapter = new PostAdapter(postsList2);
+                    recyclerView.setAdapter(postAdapter);
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<PostResponse>> call, Throwable throwable) {
+
+            }
+        });
+
 
         Toolbar toolbar = activitySecondBinding.topToolbar;
         setSupportActionBar(toolbar);
@@ -92,7 +125,7 @@ public class SecondActivity extends AppCompatActivity {
             Intent intent = new Intent(SecondActivity.this, MainActivity.class);
             startActivity(intent);
             Retrofit retrofit = new Retrofit.Builder()
-                    .baseUrl("http://192.168.55.110:8080")
+                    .baseUrl("http://192.168.55.111:8080")
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
 

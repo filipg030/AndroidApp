@@ -46,7 +46,7 @@ public class Register extends Fragment {
             replaceFragment(fragment4);
         });
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.55.110:8080")
+                .baseUrl("http://192.168.55.111:8080")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 

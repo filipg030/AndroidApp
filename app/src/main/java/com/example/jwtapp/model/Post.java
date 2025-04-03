@@ -1,14 +1,19 @@
 package com.example.jwtapp.model;
 
-public class Post {
-    private String title;
-    private String content;
+import java.io.File;
 
-    public Post(String title, String content) {
-        this.title = title;
-        this.content = content;
+public class Post {
+    private String description;
+    private String imageBase64;
+    private String email;
+
+    public Post(String description, String content, String user) {
+        this.description = description;
+        this.imageBase64 = content;
+        this.email = user;
     }
 
-    public String getTitle() { return title; }
-    public String getContent() { return content; }
+    public String getTitle() { return description; }
+    public String getImageBase64() { return imageBase64; }
+    public String getEmail() { return email; }
 }
