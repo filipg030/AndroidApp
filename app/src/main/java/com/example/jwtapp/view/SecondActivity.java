@@ -62,7 +62,7 @@ public class SecondActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.55.111:8080")
+                .baseUrl("http://192.168.55.112:8080")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
@@ -111,6 +111,13 @@ public class SecondActivity extends AppCompatActivity {
 
         });
 
+        activitySecondBinding.fab2.setOnClickListener(v -> {
+            Intent intent = new Intent(SecondActivity.this, ThirdActivity.class);
+            intent.putExtra("user", user);
+            intent.putExtra("token", token);
+            startActivity(intent);
+        });
+
     }
 
     @Override
@@ -125,7 +132,7 @@ public class SecondActivity extends AppCompatActivity {
             Intent intent = new Intent(SecondActivity.this, MainActivity.class);
             startActivity(intent);
             Retrofit retrofit = new Retrofit.Builder()
-                    .baseUrl("http://192.168.55.111:8080")
+                    .baseUrl("http://192.168.55.112:8080")
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
 

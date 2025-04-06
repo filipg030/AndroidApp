@@ -61,7 +61,7 @@
                 android:id="@+id/fab2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/note"
+                android:src="@drawable/back"
                 android:contentDescription="Note"
                 app:backgroundTint="#FFA69E"
                 android:layout_gravity="bottom|center_horizontal"

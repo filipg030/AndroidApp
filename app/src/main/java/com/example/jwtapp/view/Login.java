@@ -46,7 +46,7 @@ public class Login extends Fragment {
         });
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.55.111:8080")
+                .baseUrl("http://192.168.55.112:8080")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 

@@ -182,7 +182,7 @@ public class PhotoActivity extends AppCompatActivity {
                             Toast.makeText(PhotoActivity.this, "Photo saved!", Toast.LENGTH_SHORT).show();
                             if (photoFile.exists()) {
                                 Retrofit retrofit = new Retrofit.Builder()
-                                        .baseUrl("http://192.168.55.111:8080")
+                                        .baseUrl("http://192.168.55.112:8080")
                                         .addConverterFactory(GsonConverterFactory.create())
                                         .build();
 

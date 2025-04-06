@@ -11,9 +11,12 @@ retrofit = "2.10.0"
 gson = "2.10.1"
 gsonConverter = "2.9.0"
 camerax = "1.5.0-alpha06"
+room = "2.6.1"
 
 [libraries]
 
+room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
 camera-extensions = { group = "androidx.camera", name = "camera-extensions", version.ref = "camerax" }
 camera-core = { group = "androidx.camera", name = "camera-core", version.ref = "camerax" }
 camera-camera2 = { group = "androidx.camera", name = "camera-camera2", version.ref = "camerax" }

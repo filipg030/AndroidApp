@@ -38,7 +38,8 @@ android {
 
 dependencies {
 
-
+    implementation (libs.room.runtime)
+    annotationProcessor(libs.room.compiler)
     implementation (libs.camera.core)
     implementation (libs.camera.camera2)
     implementation (libs.camera.lifecycle)
